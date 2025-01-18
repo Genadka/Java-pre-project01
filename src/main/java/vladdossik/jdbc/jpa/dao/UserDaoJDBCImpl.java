@@ -3,7 +3,11 @@ package vladdossik.jdbc.jpa.dao;
 import vladdossik.jdbc.jpa.model.User;
 import vladdossik.jdbc.jpa.util.Util;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -72,7 +76,7 @@ public class UserDaoJDBCImpl implements UserDao {
                 String name = resultSet.getString("name");
                 String lastName = resultSet.getString("lastName");
                 byte age = resultSet.getByte("age");
-                users.add(new User(name, lastName, age));  // id не берём, если нужно, можно добавить логику
+                users.add(new User(name, lastName, age));
             }
         } catch (SQLException e) {
             e.printStackTrace();

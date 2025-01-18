@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="JDBC_JPA_TASK-master" />
+        <module name="Java-pre-project01" />
       </profile>
     </annotationProcessing>
   </component>
